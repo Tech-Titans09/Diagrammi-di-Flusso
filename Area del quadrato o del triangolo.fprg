@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Area-ToQ"/>
+        <attribute name="authors" value="giocc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-14 04:36:47 "/>
+        <attribute name="created" value="Z2lvY2M7QkxFQ0tLWTsyMDI0LTEwLTE3OyIwMTo0MDo0NSAiOzIyMjA="/>
+        <attribute name="edited" value="Z2lvY2M7QkxFQ0tLWTsyMDI0LTEwLTE4OyIwMToyMzo1NyAiOzI7MjMzNA=="/>
+        <attribute name="edited" value="VGhvbWFzIENhbGNhZ25pbGU7REVTS1RPUC1EVjhRVjcyOzIwMjQtMTEtMTQ7IjA0OjM2OjQ3ICI7MTs0MDE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="l, h, b, A" type="Real" array="False" size=""/>
+            <declare name="scelta" type="String" array="False" size=""/>
+            <output expression="&quot;Premi q per l'area del quadrato o t per il triangolo&quot;" newline="True"/>
+            <input variable="scelta"/>
+            <if expression="scelta==&quot;q&quot;">
+                <then>
+                    <output expression="&quot;Inserisci il valore del lato&quot;" newline="True"/>
+                    <input variable="l"/>
+                    <output expression="&quot;Ora calcolo l'area&quot;" newline="True"/>
+                    <assign variable="A" expression="l^2"/>
+                </then>
+                <else>
+                    <if expression="scelta==&quot;t&quot;">
+                        <then>
+                            <output expression="&quot;Inserisci il valore della base&quot;" newline="True"/>
+                            <input variable="b"/>
+                            <output expression="&quot;Inserisci il valore del'altezza&quot;" newline="True"/>
+                            <input variable="h"/>
+                            <output expression="&quot;Ora calcolo l'area&quot;" newline="True"/>
+                            <assign variable="A" expression="b*h/2"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;PIRLA!!! HO DETTO O q O t&quot;" newline="True"/>
+                            <assign variable="A" expression="0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;L'area &#232;: &quot; &amp; A" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

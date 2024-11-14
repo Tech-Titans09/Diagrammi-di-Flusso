@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Vettori"/>
+        <attribute name="authors" value="giocc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-21 01:52:54 "/>
+        <attribute name="created" value="Z2lvY2M7QkxFQ0tLWTsyMDI0LTEwLTE4OyIwMToyNTo1NCAiOzIyMjQ="/>
+        <attribute name="edited" value="Z2lvY2M7QkxFQ0tLWTsyMDI0LTEwLTIxOyIwMTo1Mjo1NCAiOzI7MjMyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lista, quadrati" type="Real" array="True" size="3"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Calcolo una lista di vettori&quot;" newline="True"/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <input variable="lista[i]"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <assign variable="quadrati[i]" expression="lista[i]^2"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;Il quadrato di &quot; &amp; lista[i] &amp; &quot; &#232; &quot; &amp; quadrati[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
