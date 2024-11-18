@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="LED1"/>
+        <attribute name="authors" value="giocc"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-28 02:02:38 "/>
+        <attribute name="created" value="Z2lvY2M7QkxFQ0tLWTsyMDI0LTEwLTI4OyIwMTo0MjoxNiAiOzIyMjI="/>
+        <attribute name="edited" value="Z2lvY2M7QkxFQ0tLWTsyMDI0LTEwLTI4OyIwMjowMjozOCAiOzI7MjMzMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LED, pushbutton" type="Integer" array="False" size=""/>
+            <declare name="pinmodeLED, ledstate, pinmodepushbutton, buttonstate" type="Boolean" array="False" size=""/>
+            <assign variable="ledstate" expression="false"/>
+            <output expression="&quot;Dimmi su che pin vuoi collegare il LED&quot;" newline="True"/>
+            <input variable="LED"/>
+            <output expression="&quot;Dimmi che modalit&#224; vuoi usare per il pin collegato al LED metti true per Output e false per Input&quot;" newline="True"/>
+            <input variable="pinmodeLED"/>
+            <output expression="&quot;Dimmi su che PIN vuoi collegare il pushbutton&quot;" newline="True"/>
+            <input variable="pinmodepushbutton"/>
+            <while expression="1==1">
+                <output expression="&quot;Digita true per schiacciare il bottone per cambiare stato al LED&quot;" newline="True"/>
+                <input variable="buttonstate"/>
+                <if expression="ledstate==true">
+                    <then>
+                        <assign variable="ledstate" expression="!ledstate"/>
+                    </then>
+                    <else>
+                        <assign variable="ledstate" expression="ledstate"/>
+                    </else>
+                </if>
+                <output expression="LEDstate" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
